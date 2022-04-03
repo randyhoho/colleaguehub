@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  [x: string]: any;
   public employees!: Employee[];
   public editEmployee!: Employee;
   public deleteEmployee!: Employee;
@@ -75,6 +76,8 @@ export class AppComponent implements OnInit {
     console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
+      
+      //! -1 = 我地搵到佢
       if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
       || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
       || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
@@ -108,7 +111,4 @@ export class AppComponent implements OnInit {
     container!.appendChild(button);
     button.click();
   }
-
-
-
 }
