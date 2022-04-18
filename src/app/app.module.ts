@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { EmployeeService } from './employee.service';
+import { ColleagueService } from './colleague.service';
 import { HttpClientModule } from '@angular/common/http';import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';import { FormsModule } f
     BrowserModule,
     HttpClientModule, FormsModule
   ],
-  providers: [EmployeeService],
+  providers: [ColleagueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
