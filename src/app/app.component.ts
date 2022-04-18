@@ -86,8 +86,10 @@ export class AppComponent implements OnInit {
       }
     }
     this.colleagues = results;
-    if (results.length === 0 || !key) {
+    if (!key) {
       this.getColleagues();
+    }else{
+      results.length === 0
     }
   }
 
